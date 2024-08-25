@@ -1,0 +1,38 @@
+label.required::after{
+    content: "*";
+    color: rgb(223, 18, 18);
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.admin-logo {
+    height: 66px;
+    width: 240px;
+}
+
+.admin-logo-sm {
+    height: 67px;
+    width: 70px;
+}
+
+.navbar-brand-box {
+    padding: 0 0rem;
+}
+
+.admin-index-img{
+    height: 30px;
+    width: 70px;
+}
+
+.Admincontact-btn{
+    width: 55px;
+    height: 25px;
+    margin: 2px;
+}
+
+.action-btn{
+    height: 30px;
+    width: 60px;
+    margin-bottom: 5px;
+}
+
