@@ -44,6 +44,9 @@
                 <div class="product-img position-relative overflow-hidden">
                     <img class="img-fluid w-100" style="height: 300px; width: 300px;" src="{{ asset('storage/'. $product->image) }}" alt="">
                     <div class="product-action">
+                        @if($product->title)
+                            <a class="label">{{ $product->title }}</a>
+                        @endif
                         <a href="{{ route('product_details', ['id' => $product->id]) }}" class="btn btn-outline-dark btn-square">
                             <i class="fa fa-eye" aria-hidden="true"></i>
                         </a>

@@ -321,6 +321,7 @@
                 <div class="product-img position-relative overflow-hidden">
                     <img class="img-fluid w-100"style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/panjabi/Panjabi7.jpg') }}" alt="">
                     <div class="product-action">
+                        <a class="label">New</a>
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Panjabi 7"  data-price="459" data-image="{{ asset('frontend/img/men/panjabi/Panjabi7.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Panjabi 7" data-price="459" data-image="{{ asset('frontend/img/men/panjabi/Panjabi7.jpg') }}" href="#"><i class="far fa-heart"></i></a>
                     </div>
