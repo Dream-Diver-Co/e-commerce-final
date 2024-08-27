@@ -86,16 +86,6 @@ class FrontendController extends Controller
         return view('frontend.page.subcategory', compact('category'));
     }
 
-    // public function showProducts($subcategoryId)
-    // {
-    //     // Find the subcategory
-    //     $subcategory = SubCategory::findOrFail($subcategoryId);
-
-    //     // Get paginated products for the subcategory
-    //     $products = $subcategory->products()->paginate(8); // Adjust the number per page as needed
-
-    //     return view('frontend.page.product', compact('subcategory', 'products'));
-    // }
     public function showProducts($subcategoryId)
     {
         // Find the subcategory
@@ -114,13 +104,6 @@ class FrontendController extends Controller
 
         return view('frontend.page.product_details', compact('product')); // Pass the product data to the view
     }
-
-    // public function showSubcategoryProducts($id)
-    // {
-    //     $subcategory = Subcategory::with('products')->findOrFail($id);
-
-    //     return view('frontend.products', compact('subcategory'));
-    // }
 
     public function showSubcategoryProducts($id)
     {
