@@ -36,3 +36,11 @@ label.required::after{
     margin-bottom: 5px;
 }
 
+.admin-home {
+    padding: 24px;
+    color: white;
+}
+
+.admin-home:hover{
+    color: #FFC800;
+}

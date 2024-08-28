@@ -20,37 +20,52 @@
                         <div class="dropdown-menu dropdown-menu-right cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                             <ul>
                                 @if(auth()->check())
-                                <li>
-                                    <a href=""><i class="fi fi-rs-user mr-10"></i>My Account</a>
-                                </li>
-                                <li>
-                                    <a href="page-account.html"><i class="fi fi-rs-location-alt mr-10"></i>Order Tracking</a>
-                                </li>
-                                <li>
-                                    <a href="page-account.html"><i class="fi fi-rs-label mr-10"></i>My Voucher</a>
-                                </li>
-                                <li>
-                                    <a href="shop-wishlist.html"><i class="fi fi-rs-heart mr-10"></i>My Wishlist</a>
-                                </li>
-                                <li>
-                                    <a href="page-account.html"><i class="fi fi-rs-settings-sliders mr-10"></i>Setting</a>
-                                </li>
-                                <li>
-                                    {{-- <a href="{{ route('logout') }}"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a> --}}
+
+                                    @if(auth()->user()->role === 'user')
+                                        <li>
+                                            <a href="{{ route('dashboard') }}" target="_blank"><i class="fi fi-rs-user mr-10"></i>Dashboard</a>
+                                        </li>
+                                    @elseif(auth()->user()->role === 'admin')
+                                        <li>
+                                            <a href="{{ route('admin.dashboard') }}" target="_blank"><i class="fi fi-rs-user mr-10"></i>Dashboard</a>
+                                        </li>
+                                    @elseif(auth()->user()->role === 'vendor')
+                                        <li>
+                                            <a href="{{ route('vendor.dashboard') }}" target="_blank"><i class="fi fi-rs-user mr-10"></i>Dashboard</a>
+                                        </li>
+                                    @endif
+
+                                    {{-- <li>
+                                        <a href="{{ route('profile.edit')}}" target="_blank"><i class="fi fi-rs-user mr-10"></i>My Account</a>
+                                    </li> --}}
+                                    <li>
+                                        <a href=""><i class="fi fi-rs-location-alt mr-10"></i>Order Tracking</a>
+                                    </li>
+                                    <li>
+                                        <a href=""><i class="fi fi-rs-label mr-10"></i>My Voucher</a>
+                                    </li>
+                                    <li>
+                                        <a href=""><i class="fi fi-rs-heart mr-10"></i>My Wishlist</a>
+                                    </li>
+                                    <li>
+                                        <a href=""><i class="fi fi-rs-settings-sliders mr-10"></i>Setting</a>
+                                    </li>
+                                    <li>
+                                        {{-- <a href="{{ route('logout') }}"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a> --}}
 
 
-                                    <!-- Authentication -->
-                                    <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
+                                        <!-- Authentication -->
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
 
-                                        <x-dropdown-link :href="route('logout')"
-                                                onclick="event.preventDefault();
-                                                            this.closest('form').submit();">
-                                            <i class="fi fi-rs-sign-out mr-10"></i>
-                                            {{ __('Log Out') }}
-                                        </x-dropdown-link>
-                                    </form>
-                                </li>
+                                            <x-dropdown-link :href="route('logout')"
+                                                    onclick="event.preventDefault();
+                                                                this.closest('form').submit();">
+                                                <i class="fi fi-rs-sign-out mr-10"></i>
+                                                {{ __('Log Out') }}
+                                            </x-dropdown-link>
+                                        </form>
+                                    </li>
                                 @else
                                 <li>
                                     <a class="dropdown-item" href="{{ route('register') }}"><i class="fi fi-rs-user-add mr-10"></i>Create an Account</a>

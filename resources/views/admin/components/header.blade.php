@@ -26,6 +26,7 @@
             <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
                 <i class="ri-menu-2-line align-middle"></i>
             </button>
+            <a class="px-3 admin-home waves-effect" href="{{ route('index')}}" target="_blank">Home Page</a>
         </div>
 
         <div class="d-flex">
