@@ -1,10 +1,23 @@
 @extends('frontend.layouts.master')
 
 @section('content')
+
     <div class="container my-5">
         <div class="text-center mb-5">
             <h1 class="display-4 text-success">Order Confirmed!</h1>
             <p class="lead">Thank you for your order. Your items will be shipped soon.</p>
+        </div>
+
+        <div class="text-center mt-5">
+            <h4 class="font-weight-bold">Total Amount: ${{ number_format($order->total_amount, 2) }}</h4>
+
+            <a href="{{ route('product')}}" class="btn btn-primary btn-lg">
+                <i class="fas fa-shopping-cart"></i> Continue Shopping
+            </a>
+
+            <a href="{{ route('order.invoice', $order->id) }}" class="btn btn-success btn-lg ml-3">
+                <i class="fas fa-file-pdf"></i> Download Invoice (PDF)
+            </a>
         </div>
 
         <div class="row px-xl-5">
@@ -49,12 +62,5 @@
             </div>
         </div>
 
-        <div class="text-center mt-5">
-            <h4 class="font-weight-bold">Total Amount: ${{ number_format($order->total_amount, 2) }}</h4>
-
-            <a href="{{ route('product')}}" class="btn btn-primary btn-lg">
-                <i class="fas fa-shopping-cart"></i> Continue Shopping
-            </a>
-        </div>
     </div>
 @endsection

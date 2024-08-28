@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\OrderItem;
+use Barryvdh\DomPDF\Facade;
+use PDF;
 
 class OrderController extends Controller
 {
@@ -53,6 +55,17 @@ class OrderController extends Controller
         // Display the order confirmation page
         return view('frontend.order.confirmation', compact('order'));
     }
+
+
+    public function downloadInvoice($orderId)
+    {
+        $order = Order::with('items.product')->findOrFail($orderId);
+
+        $pdf = PDF::loadView('frontend.order.invoice', compact('order'));
+
+        return $pdf->download('invoice-' . $order->id . '.pdf');
+    }
+
 
     public function destroy($id)
     {
