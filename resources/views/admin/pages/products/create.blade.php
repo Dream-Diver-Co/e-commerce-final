@@ -63,7 +63,7 @@
                         @endforeach
                     </select><br>
                     <label for="title">Title</label><br>
-                    <input type="text" name="title" id="title" class="form-control"><br>
+                    <input type="text" name="title" id="title" class="form-control" required><br>
                     <label for="sub_title">Sub Title</label><br>
                     <input type="text" name="sub_title" id="sub_title" class="form-control"><br>
                     <label for="old_price">Old Price</label><br>
