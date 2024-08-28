@@ -63,9 +63,9 @@
                         @endforeach
                     </select><br>
                     <label for="title">Title</label><br>
-                    <input type="text" name="title" id="title" class="form-control" required><br>
+                    <input type="text" name="title" id="title" class="form-control"><br>
                     <label for="sub_title">Sub Title</label><br>
-                    <input type="text" name="sub_title" id="sub_title" class="form-control" required><br>
+                    <input type="text" name="sub_title" id="sub_title" class="form-control"><br>
                     <label for="old_price">Old Price</label><br>
                     <input type="number" name="old_price" id="old_price" step="0.01" class="form-control"><br>
 
