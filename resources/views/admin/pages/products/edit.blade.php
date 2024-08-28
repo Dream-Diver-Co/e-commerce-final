@@ -71,9 +71,9 @@
                             @endforeach
                         </select><br>
                         <label for="title">Title</label><br>
-                        <input class="form-control" type="text" name="title" id="title" value="{{ $product->title }}" required><br>
+                        <input class="form-control" type="text" name="title" id="title" value="{{ $product->title }}"><br>
                         <label for="sub_title">Sub Title</label><br>
-                        <input class="form-control" type="text" name="sub_title" id="sub_title" value="{{ $product->sub_title }}" required><br>
+                        <input class="form-control" type="text" name="sub_title" id="sub_title" value="{{ $product->sub_title }}"><br>
                         <label for="old_price">Old Price</label><br>
                         <input class="form-control" type="number" name="old_price" id="old_price" step="0.01" value="{{ $product->old_price }}"><br>
                         <div class="form-group">
