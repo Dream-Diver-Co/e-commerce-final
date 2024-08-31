@@ -25,10 +25,21 @@ class CreateProductsTable extends Migration
             $table->text('information')->nullable();
             $table->timestamps();
         });
+
+        // 31
+        Schema::table('products', function (Blueprint $table) {
+            $table->string('status')->default('Regular'); // Add 'status' column with default 'Regular'
+        });
     }
 
     public function down()
     {
         Schema::dropIfExists('products');
+
+        // 31
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropColumn('status');
+        });
+
     }
 }

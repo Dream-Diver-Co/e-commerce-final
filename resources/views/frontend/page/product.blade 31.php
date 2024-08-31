@@ -6,6 +6,7 @@
     <div class="row px-xl-5">
         <div class="col-12">
             <div class="col-12">
+                <!-- Check for success message -->
                 @if(session('success'))
                     <div id="success-message" class="alert alert-success">
                         {{ session('success') }}
@@ -15,6 +16,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- Breadcrumb Start -->
 <div class="container-fluid">
@@ -33,10 +35,10 @@
 <!-- Products Start -->
 <div class="container-fluid">
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
-        <span class="bg-secondary pr-3">New Regular Products</span>
+        <span class="bg-secondary pr-3">New Featured Products</span>
     </h2>
     <div class="row px-xl-5">
-        @foreach($products as $product)
+        @foreach($products as $product) <!-- Use $products for the loop -->
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
@@ -72,18 +74,27 @@
         </div>
         @endforeach
     </div>
+    <!-- Pagination Links -->
+    {{-- <div class="d-flex justify-content-center">
+        {{ $products->links('pagination::bootstrap-4') }} <!-- This will now work as $products is paginated -->
+    </div> --}}
 </div>
 <!-- Products End -->
 
 <script>
+    // Auto-hide the success message after 5 seconds
     document.addEventListener('DOMContentLoaded', function () {
         const successMessage = document.getElementById('success-message');
         if (successMessage) {
             setTimeout(() => {
                 successMessage.style.display = 'none';
-            }, 5000);
+            }, 5000); // 5000 milliseconds = 5 seconds
         }
     });
 </script>
+
+
+
+
 
 @endsection

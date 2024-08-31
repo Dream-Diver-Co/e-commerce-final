@@ -313,7 +313,7 @@
 
 
 <!-- Products Start -->
-<div class="container-fluid pt-5 pb-3">
+{{-- <div class="container-fluid pt-5 pb-3">
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Featured Products</span></h2>
     <div class="row px-xl-5">
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
@@ -518,8 +518,46 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- Products End -->
+
+<!-- Featured Products Start -->
+<div class="container-fluid pt-5 pb-3">
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
+        <span class="bg-secondary pr-3">Featured Products</span>
+    </h2>
+    <div class="row px-xl-5">
+        @foreach($featuredProducts as $product)
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <div class="product-item bg-light mb-4">
+                <div class="product-img position-relative overflow-hidden">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;" src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+                    <div class="product-action">
+                        <a class="label">New</a>
+                        <a class="btn btn-outline-dark btn-square view-btn" data-name="{{ $product->name }}" data-price="{{ $product->price }}" data-image="{{ asset($product->image) }}"><i class="fa fa-eye"></i></a>
+                        <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="{{ $product->name }}" data-price="{{ $product->price }}" data-image="{{ asset($product->image) }}" href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="text-center py-4">
+                    <a class="h6 text-decoration-none text-truncate" href="">{{ $product->name }}</a>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <h5>${{ $product->price }}</h5><h6 class="text-muted ml-2"><del>${{ $product->original_price }}</del></h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mb-1">
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star-half-alt text-primary mr-1"></small>
+                        <small class="far fa-star text-primary mr-1"></small>
+                        <small>(99)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+</div>
+<!-- Featured Products End -->
 
 
 <!-- Offer Start -->
@@ -561,7 +599,7 @@
 
 
 <!-- Products Start -->
-<div class="container-fluid pt-5 pb-3">
+{{-- <div class="container-fluid pt-5 pb-3">
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Recent Products</span></h2>
     <div class="row px-xl-5">
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
@@ -765,8 +803,50 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- Products End -->
+
+<!-- Recent Products Start -->
+<div class="container-fluid pt-5 pb-3">
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
+        <span class="bg-secondary pr-3">Recent Products</span>
+    </h2>
+    <div class="row px-xl-5">
+        @foreach($recentProducts as $product)
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <div class="product-item bg-light mb-4">
+                <div class="product-img position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+                    <div class="product-action">
+                        @if($product->title)
+                            <a class="label">{{ $product->title }}</a>
+                        @endif
+                        <a href="{{ route('product_details', ['id' => $product->id]) }}" class="btn btn-outline-dark btn-square">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="{{ $product->name }}" data-price="{{ $product->price }}" data-image="{{ asset('storage/'. $product->image) }}" href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="text-center py-4">
+                    <a class="h6 text-decoration-none text-truncate" href="">{{ $product->name }}</a>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <h5>${{ $product->price }}</h5><h6 class="text-muted ml-2"><del>${{ $product->original_price }}</del></h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mb-1">
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star-half-alt text-primary mr-1"></small>
+                        <small>(99)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+</div>
+<!-- Recent Products End -->
 
 
 <!-- Vendor Start -->

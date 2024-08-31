@@ -42,6 +42,8 @@ Route::get('/shop', [FrontendController::class, 'shop'])->name('shop');
 Route::get('/subcategories', [FrontendController::class, 'subcategory'])->name('subcategory');
 // Route::get('/categories/{id}/subcategories', [FrontendController::class, 'subcategory'])->name('subcategory');
 Route::get('/product', [FrontendController::class, 'product'])->name('product');
+// Route::get('/products/regular', [ProductController::class, 'showRegularProducts'])->name('products.regular');
+
 Route::get('/categories/{category}/subcategories', [FrontendController::class, 'showSubcategories'])->name('categories.subcategories');
 Route::get('/subcategories/{subcategory}/products', [FrontendController::class, 'showProducts'])->name('subcategories.products');
 Route::get('/product_details/{id}', [FrontendController::class, 'product_details'])->name('product_details');
@@ -108,6 +110,11 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('categories', CategoryController::class);
         Route::resource('subcategories', SubcategoryController::class);
         Route::resource('products', ProductController::class);
+        // Route::patch('/products/{product}/status/{status}', [ProductController::class, 'updateStatus'])->name('products.updateStatus');
+        Route::post('/products/{product}/status', [ProductController::class, 'updateStatus'])->name('products.updateStatus');
+
+        // Route::get('/products/regular', [ProductController::class, 'showRegularProducts'])->name('products.regular');
+
 
         // Order Management Routes
         Route::get('/orders', [OrderController::class, 'index'])->name('admin.orders.index');

@@ -16,31 +16,14 @@ use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
-    // public function index()
-    // {
-    //     $categories = Category::paginate(12);
-    //     $summers = Summer::all();
-    //     $winters = Winter::all();
-    //     $heroes = Hero::all();
-    //     return view('frontend.index', compact('heroes', 'summers', 'winters', 'categories'));
-    // }
-
     public function index()
-{
-    $categories = Category::paginate(12);
-    $summers = Summer::all();
-    $winters = Winter::all();
-    $heroes = Hero::all();
-
-    // Fetch products with status 'Featured'
-    $featuredProducts = Product::where('status', 'Featured')->get();
-
-    // Fetch products with status 'Recent'
-    $recentProducts = Product::where('status', 'Recent')->get();
-
-    return view('frontend.index', compact('heroes', 'summers', 'winters', 'categories', 'featuredProducts', 'recentProducts'));
-}
-
+    {
+        $categories = Category::paginate(12);
+        $summers = Summer::all();
+        $winters = Winter::all();
+        $heroes = Hero::all();
+        return view('frontend.index', compact('heroes', 'summers', 'winters', 'categories'));
+    }
 
     public function about()
     {
@@ -139,8 +122,6 @@ class FrontendController extends Controller
 
     public function offer()
     {
-        $offerProducts = Product::where('status', 'Offer')->get();
-        return view('frontend.page.offer', compact('offerProducts'));
+        return view('frontend.page.offer');
     }
-
 }

@@ -97,44 +97,4 @@ class ProductController extends Controller
         return redirect()->route('products.index')->with('success', 'Product deleted successfully.');
     }
 
-    // public function updateStatus(Product $product, $status)
-    // {
-    //     $product->status = $status;
-    //     $product->save();
-
-    //     return redirect()->route('products.index')->with('success', 'Product status updated successfully.');
-    // }
-
-    public function updateStatus(Request $request, Product $product)
-{
-    $request->validate([
-        'status' => 'required|string|in:Regular,Featured,Recent,Offer',
-    ]);
-
-    $product->status = $request->status;
-    $product->save();
-
-    return redirect()->route('products.index')->with('success', 'Product status updated successfully.');
-}
-
-
-
-    // public function showRegularProducts()
-    // {
-    //     // Assuming 'status' is the column in your products table that holds the status
-    //     $products = Product::where('status', 'Regular')->paginate(8);
-
-    //     return view('frontend.pages.products.index', compact('products'));
-    // }
-
-    // public function showRegularProducts()
-    // {
-    //     // Retrieve only products with the 'Regular' status
-    //     $products = Product::where('status', 'Regular')->get();
-    //     return view('frontend.pages.products.index', compact('products'));
-    // }
-
-
-
-
 }
