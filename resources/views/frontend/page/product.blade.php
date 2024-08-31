@@ -42,7 +42,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 300px; width: 300px;" src="{{ asset('storage/'. $product->image) }}" alt="">
+                    <img class="img-fluid w-100" src="{{ asset('storage/'. $product->image) }}" alt="">
                     <div class="product-action">
                         @if($product->title)
                             <a class="label">{{ $product->title }}</a>
