@@ -51,16 +51,7 @@ class OrderController extends Controller
 
     }
 
-    // public function confirmation($id)
-    // {
-    //     // Retrieve the specific order
-    //     $order = Order::findOrFail($id);
 
-    //     // Display the order confirmation page
-    //     return view('frontend.order.confirmation', compact('order'));
-    // }
-
-    
     public function confirmation($id)
     {
         // Retrieve the specific order
