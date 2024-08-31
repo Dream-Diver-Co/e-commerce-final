@@ -10,7 +10,7 @@
     <meta content="Dream Shop" name="description">
 
     <!-- Favicon -->
-    <link href="{{ asset('frontend/img/logo.png') }}" rel="icon">
+    <link rel="shortcut icon" href="{{ asset('/admin/assets/images/Dream.png') }}">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
