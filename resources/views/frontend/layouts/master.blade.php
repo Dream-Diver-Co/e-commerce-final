@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Dream Ecommerce</title>
+    <title>Dream Shop</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Dream Shop" name="keywords">
     <meta content="Dream Shop" name="description">
