@@ -52,7 +52,7 @@
                         {{-- <th>Sub Title</th> --}}
                         <th>Category</th>
                         <th>Subcategory</th>
-                        <th>Old Price</th>
+                        {{-- <th>Old Price</th> --}}
                         {{-- <th>Description</th>
                         <th>Sub Description</th>
                         <th>Information</th> --}}
@@ -76,39 +76,14 @@
                             {{-- <td>{{ $product->sub_title }}</td> --}}
                             <td>{{ optional($product->category)->name }}</td>
                             <td>{{ optional($product->subcategory)->name }}</td>
-                            <td>{{ $product->old_price }}</td>
+                            {{-- <td>{{ $product->old_price }}</td> --}}
                             {{-- <td>{{ $product->description }}</td>
                             <td>{{ $product->sub_description }}</td>
                             <td>{{ $product->information }}</td> --}}
-                            {{-- <td>
-                                <div class="btn-group" role="group">
-                                    <form action="{{ route('products.updateStatus', ['product' => $product->id, 'status' => 'Regular']) }}" method="POST">
-                                        @csrf
-                                        @method('PATCH')
-                                        <button type="submit" class="btn btn-sm {{ $product->status == 'Regular' ? 'btn-secondary' : 'btn-outline-secondary' }}">
-                                            Regular
-                                        </button>
-                                    </form>
-                                    <form action="{{ route('products.updateStatus', ['product' => $product->id, 'status' => 'Featured']) }}" method="POST">
-                                        @csrf
-                                        @method('PATCH')
-                                        <button type="submit" class="btn btn-sm {{ $product->status == 'Featured' ? 'btn-primary' : 'btn-outline-primary' }}">
-                                            Featured
-                                        </button>
-                                    </form>
-                                    <form action="{{ route('products.updateStatus', ['product' => $product->id, 'status' => 'Recent']) }}" method="POST">
-                                        @csrf
-                                        @method('PATCH')
-                                        <button type="submit" class="btn btn-sm {{ $product->status == 'Recent' ? 'btn-success' : 'btn-outline-success' }}">
-                                            Recent
-                                        </button>
-                                    </form>
-                                </div>
-                            </td> --}}
                             <td>
                                 <form action="{{ route('products.updateStatus', $product) }}" method="POST" style="display: inline-block;">
                                     @csrf
-                                    <select name="status" onchange="this.form.submit()" class="form-control form-control-sm">
+                                    <select name="status" onchange="this.form.submit()" class="status form-control-sm">
                                         <option value="Regular" {{ $product->status == 'Regular' ? 'selected' : '' }}>Regular</option>
                                         <option value="Featured" {{ $product->status == 'Featured' ? 'selected' : '' }}>Featured</option>
                                         <option value="Recent" {{ $product->status == 'Recent' ? 'selected' : '' }}>Recent</option>
@@ -116,7 +91,6 @@
                                     </select>
                                 </form>
                             </td>
-
 
                             <td>
                                 <a href="{{ route('products.show', $product) }}" class="btn btn-primary btn-sm action-btn">View</a>

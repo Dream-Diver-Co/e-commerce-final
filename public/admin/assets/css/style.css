@@ -44,3 +44,7 @@ label.required::after{
 .admin-home:hover{
     color: #FFC800;
 }
+
+.status{
+    background-color: #FFC800;
+}
