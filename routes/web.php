@@ -12,8 +12,6 @@ use App\Http\Controllers\UserContactController;
 use App\Http\Controllers\AdmincontactController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ClientController;
-use App\Http\Controllers\FeaturedController;
-use App\Http\Controllers\RecentController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubcategoryController;
 use App\Http\Controllers\ProductController;
@@ -40,7 +38,6 @@ Route::get('/about', [FrontendController::class, 'about'])->name('about');
 
 Route::get('/shop', [FrontendController::class, 'shop'])->name('shop');
 Route::get('/subcategories', [FrontendController::class, 'subcategory'])->name('subcategory');
-// Route::get('/categories/{id}/subcategories', [FrontendController::class, 'subcategory'])->name('subcategory');
 Route::get('/product', [FrontendController::class, 'product'])->name('product');
 
 
@@ -102,8 +99,6 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         // Resource Routes
         Route::resource("/hero", HeroController::class);
         Route::resource('/client', ClientController::class);
-        Route::resource('featured', FeaturedController::class);
-        Route::resource('recent', RecentController::class);
         Route::resource('/summer', SummerController::class);
         Route::resource('winter', WinterController::class);
         Route::resource('usercontact', UserContactController::class);
@@ -112,10 +107,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('categories', CategoryController::class);
         Route::resource('subcategories', SubcategoryController::class);
         Route::resource('products', ProductController::class);
-        // Route::patch('/products/{product}/status/{status}', [ProductController::class, 'updateStatus'])->name('products.updateStatus');
         Route::post('/products/{product}/status', [ProductController::class, 'updateStatus'])->name('products.updateStatus');
 
-        // Route::get('/products/regular', [ProductController::class, 'showRegularProducts'])->name('products.regular');
 
 
         // Order Management Routes
