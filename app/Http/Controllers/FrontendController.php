@@ -13,6 +13,7 @@ use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use App\Models\CartItem;
 use Illuminate\Http\Request;
+use App\Models\Client;
 
 class FrontendController extends Controller
 {
@@ -23,13 +24,14 @@ class FrontendController extends Controller
         $winters = Winter::all();
         $heroes = Hero::all();
 
+        $clients = Client::all();
         // Fetch products with status 'Featured'
         $featuredProducts = Product::where('status', 'Featured')->get();
 
         // Fetch products with status 'Recent'
         $recentProducts = Product::where('status', 'Recent')->get();
 
-        return view('frontend.index', compact('heroes', 'summers', 'winters', 'categories', 'featuredProducts', 'recentProducts'));
+        return view('frontend.index', compact('heroes', 'summers', 'winters', 'categories', 'featuredProducts', 'recentProducts','clients'));
     }
 
     public function about()
