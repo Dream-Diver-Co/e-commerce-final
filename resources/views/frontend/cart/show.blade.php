@@ -25,7 +25,7 @@
                 <thead class="thead-dark">
                     <tr>
                         <th>Image</th>
-                        <th>Product Name</th>
+                        <th>Name</th>
                         <th>Size</th>
                         <th>Color</th>
                         <th>Price</th>

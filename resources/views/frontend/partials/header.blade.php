@@ -97,17 +97,18 @@
                 </div>
                 <div class="d-inline-flex align-items-center d-block d-lg-none">
                     <a href="" class="btn px-0 ml-2">
-                        <i class="fas fa-heart text-dark"></i>
+                        <i class="fas fa-heart text-primary"></i>
                         <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
                     </a>
 
-                    <button type="button" class="btn  my-2 my-sm-0" data-toggle="modal" data-target="#staticBackdrop">
-                        <!-- <i class="fa fa-cart-plus  total-count"></i> -->
-                        <!-- <i class="fas fa-shopping-cart text-primary"></i>
-                        <span class="badge text-secondary border border-secondary rounded-circle total-count" style="padding-bottom: 2px;"></span> -->
-                        <i class="fas fa-shopping-cart text-dark"></i>
-                        <span class="badge text-dark border border-dark rounded-circle total-count" style="padding-bottom: 2px;">0</span>
-                    </button>
+                    <a href="{{ route('cart.show')}}" class="btn  my-2 my-sm-0">
+                        <i class="fas fa-shopping-cart text-primary"></i>
+                        <span class="badge text-dark border border-dark rounded-circle" id="overall-quantity" style="padding-bottom: 2px;">@isset($cartItems)
+                            {{ $cartItems->sum('quantity') }}
+                        @else
+                            0
+                        @endisset</span>
+                    </a>
                 </div>
             </div>
         </div>
