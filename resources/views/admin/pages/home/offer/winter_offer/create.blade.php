@@ -27,11 +27,11 @@
       <form action="{{ url('admin/winter') }}" method="post" enctype="multipart/form-data">
         @csrf
         <label>Title</label></br>
-        <input type="text" name="title" id="title" class="form-control"></br>
+        <input type="text" name="title" id="title" class="form-control" required></br>
         <label>Subtitle</label></br>
-        <input type="text" name="subtitle" id="subtitle" class="form-control"></br>
+        <input type="text" name="subtitle" id="subtitle" class="form-control" required></br>
         <label>Image</label></br>
-        <input type="file" name="image" id="image" class="form-control"></br>
+        <input type="file" name="image" id="image" class="form-control" required></br>
         <input type="submit" value="Save" class="btn btn-success"></br>
     </form>
   </div>

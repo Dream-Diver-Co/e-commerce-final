@@ -132,71 +132,40 @@
 
                         <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                <i class="ri-mail-send-line"></i>
-                                <span>Featured Product</span>
+                                <i class="ri-share-line"></i>
+                                <span>Offer</span>
                             </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="{{ route('featured.create')}}">Create Featured</a></li>
-                                <li><a href="{{ route('featured.index') }}">Featured List</a></li>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                        <i class="ri-mail-send-line"></i>
+                                        <span>Summer Offer</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="{{ route('summer.create')}}">Create Summer Offer</a></li>
+                                        <li><a href="{{ route('summer.index') }}">Summer Offer List</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                        <i class="ri-mail-send-line"></i>
+                                        <span>Winter Offer</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="{{ route('winter.create')}}">Create Winter Offer</a></li>
+                                        <li><a href="{{ route('winter.index') }}">Winter Offer List</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
-
-                        <li>
-                            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                <i class="ri-mail-send-line"></i>
-                                <span>Recent Product</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="{{ route('recent.create')}}">Create Recent</a></li>
-                                <li><a href="{{ route('recent.index') }}">Recent List</a></li>
-                            </ul>
-                        </li>
-
-                        {{-- <li>
-                            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                <i class="ri-mail-send-line"></i>
-                                <span>Product category</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="">Create category</a></li>
-                                <li><a href="">category List</a></li>
-                            </ul>
-                        </li> --}}
 
                     </ul>
                 </li>
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-share-line"></i>
-                        <span>Offer</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="true">
-                        <li>
-                            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                <i class="ri-mail-send-line"></i>
-                                <span>Summer Offer</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="{{ route('summer.create')}}">Create Summer Offer</a></li>
-                                <li><a href="{{ route('summer.index') }}">Summer Offer List</a></li>
-                            </ul>
-                        </li>
 
-                        <li>
-                            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                <i class="ri-mail-send-line"></i>
-                                <span>Winter Offer</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="{{ route('winter.create')}}">Create Winter Offer</a></li>
-                                <li><a href="{{ route('winter.index') }}">Winter Offer List</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
 
-                <li>
+                {{-- <li>
                     <a href="#" class=" waves-effect">
                         <i class="ri-price-tag-3-line"></i>
                         <span>Brand</span>
@@ -400,7 +369,7 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
             </ul>
         </div>
