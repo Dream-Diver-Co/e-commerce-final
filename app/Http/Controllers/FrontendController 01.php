@@ -16,21 +16,23 @@ use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
+
     public function index()
-    {
-        $categories = Category::paginate(12);
-        $summers = Summer::all();
-        $winters = Winter::all();
-        $heroes = Hero::all();
+{
+    $categories = Category::paginate(12);
+    $summers = Summer::all();
+    $winters = Winter::all();
+    $heroes = Hero::all();
 
-        // Fetch products with status 'Featured'
-        $featuredProducts = Product::where('status', 'Featured')->get();
+    // Fetch products with status 'Featured'
+    $featuredProducts = Product::where('status', 'Featured')->get();
 
-        // Fetch products with status 'Recent'
-        $recentProducts = Product::where('status', 'Recent')->get();
+    // Fetch products with status 'Recent'
+    $recentProducts = Product::where('status', 'Recent')->get();
 
-        return view('frontend.index', compact('heroes', 'summers', 'winters', 'categories', 'featuredProducts', 'recentProducts'));
-    }
+    return view('frontend.index', compact('heroes', 'summers', 'winters', 'categories', 'featuredProducts', 'recentProducts'));
+}
+
 
     public function about()
     {
@@ -83,14 +85,16 @@ class FrontendController extends Controller
         return view('frontend.page.product', compact('subcategory', 'products'));
     }
 
-
     public function product_details($id)
     {
-        $product = Product::findOrFail($id); // Fetch the product details by ID
 
-        return view('frontend.page.product_details', compact('product')); // Pass the product data to the view
+        // Fetch the product details by ID with "regular" status
+        $product = Product::where('id', $id)
+            ->where('status', 'regular')
+            ->firstOrFail();
+
+        return view('frontend.page.product_details', compact('product'));
     }
-
 
     public function showSubcategoryProducts($id)
     {
@@ -103,7 +107,11 @@ class FrontendController extends Controller
 
     public function offer()
     {
+
         $offerProducts = Product::where('status', 'Offer')->get();
         return view('frontend.page.offer', compact('offerProducts'));
+
     }
+
+
 }

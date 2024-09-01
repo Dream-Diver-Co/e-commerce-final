@@ -42,11 +42,13 @@ Route::get('/shop', [FrontendController::class, 'shop'])->name('shop');
 Route::get('/subcategories', [FrontendController::class, 'subcategory'])->name('subcategory');
 // Route::get('/categories/{id}/subcategories', [FrontendController::class, 'subcategory'])->name('subcategory');
 Route::get('/product', [FrontendController::class, 'product'])->name('product');
-// Route::get('/products/regular', [ProductController::class, 'showRegularProducts'])->name('products.regular');
+
 
 Route::get('/categories/{category}/subcategories', [FrontendController::class, 'showSubcategories'])->name('categories.subcategories');
 Route::get('/subcategories/{subcategory}/products', [FrontendController::class, 'showProducts'])->name('subcategories.products');
 Route::get('/product_details/{id}', [FrontendController::class, 'product_details'])->name('product_details');
+
+
 
 Route::get('/checkout', [FrontendController::class, 'checkout'])->name('checkout');
 Route::get('/cart', [FrontendController::class, 'cart'])->name('cart');
