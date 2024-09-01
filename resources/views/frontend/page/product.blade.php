@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">{{ $product->name }}</a>
+                    <a class="h6 text-decoration-none text-truncate" href="{{ route('product_details', ['id' => $product->id]) }}">{{ $product->name }}</a>
                     <div class="d-flex align-items-center justify-content-center mt-2">
                         <h5>${{ $product->price }}</h5>
                         @if($product->old_price)

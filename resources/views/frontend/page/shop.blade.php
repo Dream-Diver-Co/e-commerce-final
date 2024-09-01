@@ -25,7 +25,9 @@
                     <img class="position-absolute w-100 h-100" src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}" style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 700px;">
-                            <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">{{ $category->name }}</h1>
+                            <a href="{{ route('categories.subcategories', $category->id) }}">
+                                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">{{ $category->name }}</h1>
+                            </a>
                             <p class="mx-md-5 px-5 animate__animated animate__bounceIn">{{ $category->description }}</p>
                             {{-- <p>
                                 Subcategories:
