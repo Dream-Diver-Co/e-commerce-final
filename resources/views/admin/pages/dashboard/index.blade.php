@@ -23,11 +23,11 @@
 
 <div class="row">
     <div class="col-xl-4 col-md-6">
-        <div class="card">
+        <div class="card bg-pink">
             <div class="card-body">
                 <div class="d-flex">
                     <div class="flex-grow-1">
-                        <p class="text-truncate font-size-14 mb-2">Total Sales</p>
+                        <p class="text-black font-size-15 mb-2"><b>Total Sales</b></p>
                         <h4 class="mb-2">{{ $totalDelivered }}</h4>
                         <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>{{ $totalDelivered }}</span>from previous period</p>
                     </div>
