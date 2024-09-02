@@ -30,9 +30,11 @@ class AdminController extends Controller
         // Count new orders (assuming 'Pending' status means new)
         $newOrdersCount = Order::where('status', 'Pending')->count();
 
+        $orders = Order::with('user')->paginate(10);
+
         $totalUsers = User::count();
 
-        return view('admin.pages.dashboard.index',compact('totalUsers','newOrdersCount','totalDelivered',));
+        return view('admin.pages.dashboard.index',compact('orders','totalUsers','newOrdersCount','totalDelivered',));
     }
 
     public function logout(Request $request)
