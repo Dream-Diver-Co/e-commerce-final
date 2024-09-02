@@ -14,7 +14,7 @@
         </div> --}}
 
         <!--- Sidemenu -->
-        <div id="sidebar-menu">
+        <div class="sidebar-menu" id="sidebar-menu">
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li class="menu-title">Menu</li>
@@ -28,7 +28,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
+                        <i class="fa-solid fa-list"></i>
                         <span>category</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -39,7 +39,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
+                        <i class="fa-solid fa-table-columns"></i>
                         <span>Subcategory</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -50,7 +50,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
+                        <i class="fa-brands fa-product-hunt"></i>
                         <span>Product</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
+                        <i class="fa-brands fa-first-order"></i>
                         <span>Manage Orders</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -70,7 +70,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-share-line"></i>
+                        <i class="fa-solid fa-square-h"></i>
                         <span>Home</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">

@@ -48,3 +48,33 @@ label.required::after{
 .status{
     background-color: #FFC800;
 }
+
+.sidebar-menu ul li a {
+    display: block;
+    padding: .625rem 1.5rem;
+    color: #fefefe !important;
+    position: relative;
+    font-size: 13.3px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+}
+
+.sidebar-menu ul li a i {
+    display: inline-block;
+    min-width: 1.5rem;
+    padding-bottom: .125em;
+    font-size: 1.1rem;
+    line-height: 1.40625rem;
+    vertical-align: middle;
+    color: #ffffff !important;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    opacity: .75;
+}
+
+
+.sidebar-menu ul li a:hover {
+    color: #b8d5f3 !important;
+}
