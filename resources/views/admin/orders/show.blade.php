@@ -42,38 +42,40 @@
                 <h5 class="mb-0">Order Items</h5>
             </div>
             <div class="card-body p-0">
-                <table class="table table-hover table-striped mb-0">
-                    <thead class="bg-light">
-                        <tr>
-                            <th scope="col">Image</th>
-                            <th scope="col">Product Name</th>
-                            <th scope="col">Size</th>
-                            <th scope="col">Color</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($order->items as $item)
+                <div class="table-responsive">
+                    <table class="table table-centered mb-0 align-middle table-hover table-nowrap">
+                        <thead class="bg-light">
                             <tr>
-                                <td>
-                                    @if($item->product && $item->product->image)
-                                        <img src="{{ asset('storage/' . $item->product->image) }}" alt="{{ $item->product->name }}" width="50">
-                                    @else
-                                        <span>No Image Available</span>
-                                    @endif
-                                </td>
-                                <td>{{ $item->product->name }}</td>
-                                <td>{{ $item->size }}</td>
-                                <td>{{ $item->color }}</td>
-                                <td>{{ $item->quantity }}</td>
-                                <td>${{ number_format($item->price, 2) }}</td>
-                                <td>${{ number_format($item->price * $item->quantity, 2) }}</td>
+                                <th scope="col">Image</th>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Size</th>
+                                <th scope="col">Color</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Total</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach($order->items as $item)
+                                <tr>
+                                    <td>
+                                        @if($item->product && $item->product->image)
+                                            <img src="{{ asset('storage/' . $item->product->image) }}" alt="{{ $item->product->name }}" width="50">
+                                        @else
+                                            <span>No Image Available</span>
+                                        @endif
+                                    </td>
+                                    <td>{{ $item->product->name }}</td>
+                                    <td>{{ $item->size }}</td>
+                                    <td>{{ $item->color }}</td>
+                                    <td>{{ $item->quantity }}</td>
+                                    <td>${{ number_format($item->price, 2) }}</td>
+                                    <td>${{ number_format($item->price * $item->quantity, 2) }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
