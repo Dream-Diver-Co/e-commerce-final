@@ -22,7 +22,7 @@
 <!-- end page title -->
 
 <div class="row">
-    <div class="col-xl-3 col-md-6">
+    <div class="col-xl-4 col-md-6">
         <div class="card">
             <div class="card-body">
                 <div class="d-flex">
@@ -40,12 +40,12 @@
             </div><!-- end cardbody -->
         </div><!-- end card -->
     </div><!-- end col -->
-    <div class="col-xl-3 col-md-6">
-        <div class="card">
+    <div class="col-xl-4 col-md-6">
+        <div class="card bg-success">
             <div class="card-body">
                 <div class="d-flex">
                     <div class="flex-grow-1">
-                        <p class="text-truncate font-size-14 mb-2">New Orders</p>
+                        <p class="text-black font-size-14 mb-2"><b>New Orders</b></p>
                         <h4 class="mb-2">{{ $newOrdersCount }}</h4>
                         <p class="text-muted mb-0"><span class="text-danger fw-bold font-size-12 me-2"><i class="ri-arrow-right-down-line me-1 align-middle"></i>{{ $newOrdersCount }}</span>from previous period</p>
                     </div>
@@ -58,12 +58,12 @@
             </div><!-- end cardbody -->
         </div><!-- end card -->
     </div><!-- end col -->
-    <div class="col-xl-3 col-md-6">
-        <div class="card">
+    <div class="col-xl-4 col-md-6">
+        <div class="card bg-primary">
             <div class="card-body">
                 <div class="d-flex">
                     <div class="flex-grow-1">
-                        <p class="text-truncate font-size-14 mb-2">New Users</p>
+                        <p class="text-black font-size-15 mb-2"><b>New Users</b></p>
                         <h4 class="mb-2">{{ $totalUsers }}</h4>
                         <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>{{ $totalUsers }}</span>from previous period</p>
                     </div>
@@ -76,7 +76,7 @@
             </div><!-- end cardbody -->
         </div><!-- end card -->
     </div><!-- end col -->
-    <div class="col-xl-3 col-md-6">
+    {{-- <div class="col-xl-3 col-md-6">
         <div class="card">
             <div class="card-body">
                 <div class="d-flex">
@@ -93,7 +93,7 @@
                 </div>
             </div><!-- end cardbody -->
         </div><!-- end card -->
-    </div><!-- end col -->
+    </div><!-- end col --> --}}
 </div><!-- end row -->
 
 <div class="row">
