@@ -31,7 +31,7 @@
                             <div class="carousel-item active">
                                 {{-- <img class="w-100 h-100" src="img/product-1.jpg" alt="Image"> --}}
                                 @if($product->image)
-                                    <img class="w-100 h-100" src="{{ asset('storage/' . $product->image) }}" alt="Product Image" style="width: 400px; height: 400px; transition: 0.2s; transform: scale(1); transform-origin: 98.7083% 86.25%; cursor: zoom-in;">
+                                    <img class="w-100 h-100" src="{{ asset('storage/' . $product->image) }}" alt="Product Image">
                                 @endif
                             </div>
                             {{-- <div class="carousel-item">
