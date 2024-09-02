@@ -98,7 +98,8 @@
                 <div class="d-inline-flex align-items-center d-block d-lg-none">
                     <a href="#" class="btn px-0 ml-2" id="nav-wishlist" data-toggle="modal" data-target="#wishlistModal">
                         <i class="fas fa-heart text-primary"></i>
-                        <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
+                        {{-- <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span> --}}
+
                     </a>
 
                     <a href="{{ route('cart.show')}}" class="btn  my-2 my-sm-0">
