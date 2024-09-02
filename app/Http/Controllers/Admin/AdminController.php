@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\Global\ChangePasswordRequest;
 use App\Http\Requests\Admin\UpdateAdminProfileRequest;
+use App\Models\User;
+use App\Models\Order;
 
 class AdminController extends Controller
 {
@@ -21,7 +23,16 @@ class AdminController extends Controller
 
     public function dashboard()
     {
-        return view('admin.pages.dashboard.index');
+
+        // Count the total number of delivered orders
+        $totalDelivered = Order::where('status', 'Delivered')->count();
+
+        // Count new orders (assuming 'Pending' status means new)
+        $newOrdersCount = Order::where('status', 'Pending')->count();
+
+        $totalUsers = User::count();
+
+        return view('admin.pages.dashboard.index',compact('totalUsers','newOrdersCount','totalDelivered',));
     }
 
     public function logout(Request $request)
