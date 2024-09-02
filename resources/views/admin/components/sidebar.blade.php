@@ -1,6 +1,6 @@
 <div class="vertical-menu">
 
-    <div data-simplebar class="h-100">
+    <div data-simplebar class="h-100 bg-dark">
 
         <!-- User details -->
         {{-- <div class="user-profile text-center mt-3">
