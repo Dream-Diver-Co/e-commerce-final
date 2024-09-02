@@ -11,6 +11,7 @@ use App\Http\Requests\Global\ChangePasswordRequest;
 use App\Http\Requests\Admin\UpdateAdminProfileRequest;
 use App\Models\User;
 use App\Models\Order;
+use App\Models\Product;
 
 class AdminController extends Controller
 {
@@ -30,11 +31,16 @@ class AdminController extends Controller
         // Count new orders (assuming 'Pending' status means new)
         $newOrdersCount = Order::where('status', 'Pending')->count();
 
+        // Fetch the products and count the total number of products
+        $products = Product::all(); // Fetch all products
+        $totalProducts = $products->count(); // Count the total products
+
+
         $orders = Order::with('user')->paginate(10);
 
         $totalUsers = User::count();
 
-        return view('admin.pages.dashboard.index',compact('orders','totalUsers','newOrdersCount','totalDelivered',));
+        return view('admin.pages.dashboard.index',compact('orders','totalUsers','newOrdersCount','totalDelivered','products','totalProducts'));
     }
 
     public function logout(Request $request)
