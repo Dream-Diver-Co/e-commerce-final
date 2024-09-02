@@ -59,11 +59,11 @@
         </div><!-- end card -->
     </div><!-- end col -->
     <div class="col-xl-3 col-md-6">
-        <div class="card">
+        <div class="card bg-warning">
             <div class="card-body">
                 <div class="d-flex">
                     <div class="flex-grow-1">
-                        <p class="text-truncate font-size-14 mb-2">Total Products</p>
+                        <p class="text-black font-size-15 mb-2"><b>Total Products</b></p>
                         <h4 class="mb-2">{{ $totalProducts }}</h4>
                         <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>{{ $totalProducts }}</span>from previous period</p>
                     </div>
@@ -98,7 +98,7 @@
 
 <div class="row">
     <div class="col-xl-12">
-        <div class="card bg-soft-secondary">
+        <div class="card bg-soft-info">
             <div class="card-body">
                 <div class="dropdown float-end">
                     <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
