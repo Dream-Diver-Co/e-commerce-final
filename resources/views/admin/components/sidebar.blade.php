@@ -110,7 +110,7 @@
 
                         <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                <i class="ri-mail-send-line"></i>
+                                <i class="fa-solid fa-bars"></i>
                                 <span>About</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
@@ -132,13 +132,13 @@
 
                         <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                <i class="ri-share-line"></i>
+                                <i class="fa-brands fa-buffer"></i>
                                 <span>Offer</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="true">
                                 <li>
                                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                        <i class="ri-mail-send-line"></i>
+                                        <i class="ri-share-line"></i>
                                         <span>Summer Offer</span>
                                     </a>
                                     <ul class="sub-menu" aria-expanded="false">
@@ -149,7 +149,7 @@
 
                                 <li>
                                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                        <i class="ri-mail-send-line"></i>
+                                        <i class="ri-share-line"></i>
                                         <span>Winter Offer</span>
                                     </a>
                                     <ul class="sub-menu" aria-expanded="false">
