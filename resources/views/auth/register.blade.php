@@ -59,7 +59,7 @@
                                 <div class="login_footer form-group mb-4">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" name="terms" id="termsCheckbox" required/>
-                                        <label class="custom-control-label" for="termsCheckbox">I agree to <a href="page-privacy-policy.html" class="text-primary">terms &amp; policy</a></label>
+                                        <label class="custom-control-label" for="termsCheckbox">I agree to <a href="#" class="text-primary">terms &amp; policy</a></label>
                                         @error('terms')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
