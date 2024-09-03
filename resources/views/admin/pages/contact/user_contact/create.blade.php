@@ -25,7 +25,7 @@
   <div class="card-header">Create New UserContact</div>
   <div class="card-body">
 
-      <form action="{{ url('admin/usercontact') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ url('admin/usercontact') }}" method="post" enctype="multipart/form-data">
         @csrf
         <label>Name</label></br>
         <input type="text" name="name" id="name" class="form-control"></br>

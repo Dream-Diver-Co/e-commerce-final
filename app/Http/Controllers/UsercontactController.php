@@ -13,6 +13,9 @@ class UserContactController extends Controller
         return view('admin.pages.contact.user_contact.index')->with('usercontacts', $usercontacts);
     }
 
+
+
+
     public function create()
     {
         return view('admin.pages.contact.user_contact.create');
@@ -27,6 +30,7 @@ class UserContactController extends Controller
             $input['image'] = $path;
         }
         UserContact::create($input);
+
         return redirect()->back()->with('flash_message', 'UserContact Added!');
     }
 

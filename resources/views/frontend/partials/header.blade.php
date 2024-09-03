@@ -160,9 +160,9 @@
                         </div>
                         <a href="{{ route('shop') }}" class="nav-item nav-link">Product Iteam</a>
                         <a href="{{ route('product')}}" class="nav-item nav-link">All Product</a>
+                        <a href="{{ route('offer')}}" class="nav-item nav-link">Offer Product</a>
                         <a href="{{ route('shop') }}" class="nav-item nav-link">Men's Dresses</a>
                         <a href="{{ route('shop') }}" class="nav-item nav-link">Women's Dresses</a>
-                        <a href="{{ route('shop') }}" class="nav-item nav-link">Baby's Dresses</a>
                     </div>
                 </nav>
             </div>
