@@ -10,11 +10,12 @@ use App\Models\About;
 use App\Models\Category;
 use App\Models\Subcategory;
 use App\Models\Product;
+use App\Models\Client;
+use App\Models\Cart;
 use Illuminate\Support\Facades\Auth;
 use App\Models\CartItem;
 use Illuminate\Http\Request;
-use App\Models\Client;
-use App\Models\Cart;
+
 
 class FrontendController extends Controller
 {
