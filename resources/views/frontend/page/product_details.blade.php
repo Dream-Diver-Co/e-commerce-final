@@ -21,6 +21,7 @@
         </div>
     </div>
     <!-- Breadcrumb End -->
+    
         <!-- Shop Detail Start -->
         <div class="container-fluid pb-5">
             <div class="row px-xl-5">
