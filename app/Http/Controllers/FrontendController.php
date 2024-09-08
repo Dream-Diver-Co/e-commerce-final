@@ -39,6 +39,26 @@ class FrontendController extends Controller
 
         return view('frontend.index', compact('heroes', 'summers', 'winters', 'categories', 'featuredProducts', 'recentProducts','clients','cartItems'));
     }
+    public function home2()
+    {
+        $categories = Category::paginate(12);
+        $summers = Summer::all();
+        $winters = Winter::all();
+        $heroes = Hero::all();
+
+
+        // Retrieve cart items for the authenticated user
+        $cartItems = Cart::where('user_id', auth()->id())->with('product')->get();
+
+        $clients = Client::all();
+        // Fetch products with status 'Featured'
+        $featuredProducts = Product::where('status', 'Featured')->get();
+
+        // Fetch products with status 'Recent'
+        $recentProducts = Product::where('status', 'Recent')->get();
+
+        return view('frontend.index', compact('heroes', 'summers', 'winters', 'categories', 'featuredProducts', 'recentProducts','clients','cartItems'));
+    }
 
     public function about()
     {

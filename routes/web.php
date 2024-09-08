@@ -33,6 +33,7 @@ use App\Http\Controllers\HeaderController;
 
 // Frontend Routes
 Route::get('/', [FrontendController::class, 'index'])->name('index');
+Route::get('/home2', [FrontendController::class, 'home2'])->name('home2');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 
