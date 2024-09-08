@@ -177,7 +177,14 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="{{ route('index') }}" class="nav-item nav-link {{ Request::routeIs('index') ? 'active' : '' }}">Home</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle {{ Request::routeIs(['index', 'home2']) ? 'active' : '' }}" data-toggle="dropdown">Home <i class="fa fa-angle-down mt-1"></i></a>
+                                <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
+                                    <a href="{{ route('index')}}" class="dropdown-item {{ Request::routeIs('index') ? 'active' : '' }}">Home-1</a>
+                                    <a href="{{ route('home2')}}" class="dropdown-item {{ Request::routeIs('home2') ? 'active' : '' }}">Home-2</a>
+                                </div>
+                            </div>
+                            {{-- <a href="{{ route('index') }}" class="nav-item nav-link {{ Request::routeIs('index') ? 'active' : '' }}">Home</a> --}}
                             <a href="{{ route('shop') }}" class="nav-item nav-link {{ Request::routeIs('shop') ? 'active' : '' }}">Shop</a>
                             <a href="{{ route('about') }}" class="nav-item nav-link {{ Request::routeIs('about') ? 'active' : '' }}">About</a>
                             <div class="nav-item dropdown">

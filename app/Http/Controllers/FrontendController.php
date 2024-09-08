@@ -57,7 +57,7 @@ class FrontendController extends Controller
         // Fetch products with status 'Recent'
         $recentProducts = Product::where('status', 'Recent')->get();
 
-        return view('frontend.index', compact('heroes', 'summers', 'winters', 'categories', 'featuredProducts', 'recentProducts','clients','cartItems'));
+        return view('frontend.home2', compact('heroes', 'summers', 'winters', 'categories', 'featuredProducts', 'recentProducts','clients','cartItems'));
     }
 
     public function about()
