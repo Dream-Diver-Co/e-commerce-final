@@ -2,7 +2,7 @@
 
 @section("content")
 
- <!-- Carousel Start -->
+ <!-- Carousel Starts -->
  <div class="container-fluid mb-3">
     <div class="row">
         <div class="col-lg-12">
